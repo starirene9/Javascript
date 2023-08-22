@@ -53,8 +53,12 @@
         
         document.querySelector('button').addEventListener('click', () => {
             document.querySelector('h1').textContent = '행복해요';
-            document.querySelector('h1').classList.add('active');
+            // document.querySelector('h1').classList.add('active');
+            document.querySelector('h1').className = 'active'; // 둘 중하나 쓰면 됨 
         })
+        // 만약 function을 그대로 쓴다면, ''을 쓰지 않고 그냥 적는다 ('click', h1꾸미기)
+        // var h1 꾸미기;
+        // h1 꾸미기 = function (){}
 
         // 편리함을 위해 document 안에 함수를 만들어 놓음 
         // document.querySelector('h1').textContent = '행복해요';
