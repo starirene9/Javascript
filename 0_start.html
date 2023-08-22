@@ -6,11 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- link 만 검색하면 다양한 테그가 나옴 -->
+    <link rel="stylesheet" href="style.css">
+    <script src="common.js"></script>
+    <style>
+        h1 {
+            color: pink;
+            background-color: blue;
+            border-top: 5px dotted yellow;
+            border-bottom: 5px dotted yellow;
+        }
+
+        .active {
+            background-color: green;
+        }
+        /* 하 클래스네임 앞에 . 빼먹지 말자 */
+    </style>
+
 </head>
 
 <body>
-    <h1 class="Bitna" id="bitnara">안녕하세요</h1>
-
+    <h1 class="" id="bitnara">안녕하세요</h1>
+    <button>change</button>
     <script>
         var 자식만들기; // 1. 메모리 주소 만듦
         var 자녀; // pro-gram 
@@ -23,19 +40,24 @@
             자녀.막내딸 = '구슬';
             자녀.큰딸 = {};
             자녀.큰딸.취미 = '코딩';
-            자녀.큰딸.나이 = 32; // alt shift 아래 방향키 : 윗줄 복사 
+            자녀.큰딸.나이 = 32; // option shift 아래 방향키 : 윗줄 복사 
 
         }
-        
-        자식만들기();
+
+        자식만들기(); // 이렇게 불러줘야함
 
         // 개발자 도구 console 에서 찍어보면 됨 
         window.document.children[0].children[1].children[0].textContent // h1.Bitna 가 나옴
         // window.document.children[0].children[1].children[0].textContent = '점심 잘드세요'; // h1의 textContent 가 바뀜 
+
         
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector('h1').textContent = '행복해요';
+            document.querySelector('h1').classList.add('active');
+        })
+
         // 편리함을 위해 document 안에 함수를 만들어 놓음 
-        document.querySelector('h1').textContent = '배고파요';
-        
+        // document.querySelector('h1').textContent = '행복해요';
     </script>
 </body>
 
