@@ -1,5 +1,5 @@
 # Javascript
-Javascript with 정을수 강사님<br>
+Figma, 반응형 웹, 자바스크립트 활용  with 정을수 강사님 <br>
 
 경기도 일자리재단 주관 Java Script 활용 과정입니다.<br>
 
