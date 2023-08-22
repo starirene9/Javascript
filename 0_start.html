@@ -9,16 +9,33 @@
 </head>
 
 <body>
-    <h1>안녕하세요</h1>
-    <script>
-        var 자녀; // pro-gram;
-        자녀 = {};
-        자녀.큰딸 = 구빛나;
-        자녀.둘째딸 = 구보람;
-        자녀.막내딸 = 구슬;
-        자녀.큰딸.취미 = 코딩;
-        자녀.큰딸.나이 = 32; // alt shift 아래 방향키 : 윗줄 복사 
+    <h1 class="Bitna" id="bitnara">안녕하세요</h1>
 
+    <script>
+        var 자식만들기; // 1. 메모리 주소 만듦
+        var 자녀; // pro-gram 
+
+        // 2. 함수(통) 만들기 : 무조건 실행이 안되게 하는게 함수이다. 사용시 () 두손
+        자식만들기 = function () {
+            자녀 = {};
+            자녀.큰딸 = '구빛나';
+            자녀.둘째딸 = '구보람';
+            자녀.막내딸 = '구슬';
+            자녀.큰딸 = {};
+            자녀.큰딸.취미 = '코딩';
+            자녀.큰딸.나이 = 32; // alt shift 아래 방향키 : 윗줄 복사 
+
+        }
+        
+        자식만들기();
+
+        // 개발자 도구 console 에서 찍어보면 됨 
+        window.document.children[0].children[1].children[0].textContent // h1.Bitna 가 나옴
+        // window.document.children[0].children[1].children[0].textContent = '점심 잘드세요'; // h1의 textContent 가 바뀜 
+        
+        // 편리함을 위해 document 안에 함수를 만들어 놓음 
+        document.querySelector('h1').textContent = '배고파요';
+        
     </script>
 </body>
 
