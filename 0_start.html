@@ -17,10 +17,18 @@
             border-bottom: 5px dotted yellow;
         }
 
+        h1::after {
+            /* 태그로 넣기 싫을때 이것 사용 ::before 도 있음 */
+            content: ' 이 곳에 오신것을 환영합니다.'
+            /* 드래그 되지 않음, 검색될 필요도 없는 것 
+            예를 들면 ^^ 이나 " 같은 것 */
+        }
+
         .active {
             background-color: green;
         }
         /* 하 클래스네임 앞에 . 빼먹지 말자 */
+
     </style>
 
 </head>
@@ -28,6 +36,22 @@
 <body>
     <h1 class="" id="bitnara">안녕하세요</h1>
     <button>change</button>
+
+    <h2>커피</h2>
+    <!-- unordered list -->
+    <ul>
+        <li>아이스 아메리카노</li>
+        <li>카페라떼</li>
+        <li>카푸치노</li>
+    </ul>
+      <!-- ordered list 1, 2, 3-->
+      <ol>
+        <li>다이어트 콜라</li>
+        <li>맥주</li>
+        <li>슬러쉬</li>
+    </ol>
+
+    <!-- 반드시 직계 자식으로 li이만 있어야함 -->
     <script>
         var 자식만들기; // 1. 메모리 주소 만듦
         var 자녀; // pro-gram 
@@ -58,7 +82,8 @@
         })
         // 만약 function을 그대로 쓴다면, ''을 쓰지 않고 그냥 적는다 ('click', h1꾸미기)
         // var h1 꾸미기;
-        // h1 꾸미기 = function (){}
+        // h1 꾸미기 = function (){} : 표현식 -> 호출 될때까지 기다린다. 
+        // function 이름 () {} // 미리 메모리에 준비한다 -> 이것을 함수 호이스팅이라고 한다. 
 
         // 편리함을 위해 document 안에 함수를 만들어 놓음 
         // document.querySelector('h1').textContent = '행복해요';
