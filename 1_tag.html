@@ -10,7 +10,20 @@
 
 <body>
     <style>
+        /* 족보를 건너뛰고 싶으면 빈칸, 다 나열하고 싶으면 > */
+        .inputs input[type="text"] {
+            color: gray;
+        }
 
+        /* 이렇게 하면 placeholder 글자 색 변환 가능 */
+        .inputs>div>input[type="text"]::placeholder {
+            color: rgb(233, 114, 213);
+        }
+
+        .inputs>input[type="radio"],
+        input[type="checkbox"] {
+            display: inline;
+        }
     </style>
 
     <!-- quote 안에서 짧은 것은 q, 긴 것은 p -->
@@ -66,9 +79,44 @@
         <cite>참조</cite>
     </div>
 
-    <style>
 
-    </style>
+    <div class="inputs">
+        <div>
+            <label for="get-name">이름</label>
+            <input type="text" id="get-name" placeholder="이름을 입력하세요" autofocus />
+            <!-- label의 for와 해당하는 것의 id 를 맞춰 줌 -->
+        </div>
+        <div>
+            <label for="get-email">이메일</label>
+            <input type="email" id="get-email" placeholder="이메일을 입력하세요" />
+        </div>
+        <div>
+            <label for="get-tel">전화번호</label>
+            <input type="tel" id="get-tel" placeholder="전화번호를 입력하세요" />
+        </div>
+        <div>
+            <label for="get-search">검색</label>
+            <input type="search" id="get-search" placeholder="검색하세요" />
+        </div>
+        <!-- search는 x가 나옴 -->
+        <div>
+            <label for="get-url">url</label>
+            <input type="url" id="get-url" placeholder="url 입력하세요" />
+        </div>
+        <div>
+            <strong>성별</strong>
+            <input type="radio" id="female" /> <label for="female">여</label>
+            <input type="radio" id="male" /> <label for="male">남</label>
+        </div>
+        <div>
+            <input type="checkbox" /><label>자전거</label>
+        </div>
+    </div>
+
+
+    <script>
+
+    </script>
 </body>
 
 </html>
