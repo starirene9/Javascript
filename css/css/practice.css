@@ -87,6 +87,8 @@ header {
 .paging {
     /* border: 2px solid yellow; */
     line-height: 50px;
+    font-size: 0;
+    /* 이렇게 하면 a태그에서 생긴 띄어쓰기 즉 white space를 없애줌  */
 }
 
 .body-bottom img {
@@ -107,5 +109,7 @@ header {
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-    padding: 10px;
+    padding: 4px;
+    margin: 5px;
+    /* border: 1px solid yellow; */
 }
