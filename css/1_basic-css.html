@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
- <!-- reset 문법-->
- <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
+<!-- reset 문법-->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
 
 <body>
     <style>
@@ -19,10 +19,16 @@
         body {
             border: 2px solid blue;
         } */
+/* 
+        div {
+
+            width: 50%;
+            margin: 20px auto;
+        } */
 
         .box {
             border: 5px solid black;
-            width: 380px; 
+            width: 380px;
             /* 450 - (5+20)*2 */
             padding: 20px;
             margin: 10px auto;
@@ -31,36 +37,107 @@
             /* box-sizing: border-box;  */
             line-height: 25px;
         }
+
         .box strong {
-            padding : 2px;
+            padding: 2px;
         }
-        .box2 {
+
+        .pink-box {
             background-color: pink;
-            line-height: 50px; 
+            line-height: 50px;
             /* 이렇게 하면 높이를 조절해줌 */
             text-align: center;
-            /* margin: 0 auto; */
         }
-        .box img { 
+
+        .box img {
             vertical-align: -30px;
             /* vertical-align: middle; */
-            /* 이미지 깨질때 음수로 맞추면 됨 */
+            /* 이미지 깨질 때 음수로 맞추면 됨 */
         }
 
         /* 
         반응형 할 때 모든 div 박스의 height, weight 가 걸려있으면 곤란하다. 
-        가급적이면 자동 사이즈를 사용해야 한다. 
+        가급적이면 자동 사이즈를 사용해야 한다. how? by using margin & padding 
         */
 
+        .first-box {
+            border: 2px solid green;
+            padding: 10px 20px;
+        }
+
+        .second-box {
+            border: 2px solid blue;
+            padding: 13px 0px 13px 30px;
+        }
+
+
+        .third-box {
+            border: 2px solid red;
+            padding: 23px 20px 5px;
+            width: 452px;
+            height: 114px;
+        }
+
+        .mother {
+            background-color: yellowgreen;
+            overflow: scroll;
+            height: 100px;
+        }
+
+/* practice 부분 */
+
+        .main-box {
+            border: 4px solid #000;
+            width: 500px;
+            background-color: greenyellow;
+            padding: 20px;
+        }
+
+        .main-box>* {
+            border: 4px solid black;
+            background-color: orange;
+        }
+
+        .main-box .box-2 {
+            margin: 20px 0;
+            /* 중간 박스에 상하 마진을 줌으로써 올킬 */
+        }
+
+        .main-box > .boxes {
+            padding: 10px;
+        }
+
+    
+
     </style>
-    <div class="box">
-        <p>
-            당신은 훌륭한 <strong>프론트엔드 개발자</strong><img src="https://placehold.it/80x80"/>가 될것 입니다.
-            리액트, TypeScript, JS, Html, CSS, Node.js 등 모두 섭렵하십시오.
-        </p>
+    <div class="mother">
+        <div class="box">
+            <p>
+                당신은 훌륭한 <strong>프론트엔드 개발자</strong><img src="https://placehold.it/80x80" />가 될것 입니다.
+                리액트, TypeScript, JS, Html, CSS, Node.js 등 모두 섭렵하십시오.
+            </p>
+        </div>
     </div>
 
-    <div class="box2">하이염</div>
+    <div class="pink-box">하이염</div>
+
+    <div class="first-box">너무나도 잘하고 있는 빛나</div>
+
+    <div class="second-box">꼭 성공하고 꿈을 이룰 빛나</div>
+
+    <div class="third-box">올해 프로트엔드 마스터 해서 멋진 개발자 되쟝!ㅎ</div>
+
+    <div class="main-box">
+        <div class="boxes box1">
+            <span>1</span>
+        </div>
+        <div class="boxes box-2">
+            <span>2</span>
+        </div>
+        <div class="boxes box-3">
+            <span>3</span>
+        </div>
+    </div>
 </body>
 
 </html>
