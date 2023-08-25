@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* 공통적인것은 이렇게 빼 놓는다. */
+        .icon .ico {
+            font-size: 0;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+
+        .icon .like {
+            background: url('./images/icon.png') no-repeat 0 0;
+                /* position / size 순인데 position 만 제자리 위치 준 상태 */
+        }
+
+        .icon .like:hover {
+            background-position: -50px 0;
+            /*  background-position : 가로 세로 상황 */
+        }
+
+        .icon .find {
+            background: url('./images/icon.png') no-repeat 0 -50px;
+        }
+
+        .icon .find:hover {
+            background-position: -50px -50px;
+        }
+
+    </style>
+
+    <!-- hover를 이용해서 어떻게 만들지 고민해보기 -->
+    <div class="icon">
+        <a href="" class="ico like">즐겨찾기</a>
+        <!-- 시각 장애인에게는 들려야 하기 때문에 글자로 있어야함 -->
+        <a href="" class="ico find">위치찾기</a>
+    </div>
+
+</body>
+
+</html>
