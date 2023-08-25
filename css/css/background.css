@@ -1,0 +1,49 @@
+.wrap {
+    width: 500px;
+    background: lightgray url('../images/landing-background.gif') no-repeat 100% 100% / cover;
+}
+
+.box {
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.content>* {
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+    color: white;
+    text-align: right;
+    line-height: 35px;
+}
+
+.content strong {
+    /* border: 2px solid red; */
+    margin-right: 10px;
+    line-height: 8px;
+}
+
+.content span {
+    color: black;
+}
+
+
+.box1 {
+    margin-top: 0;
+    background-color: orangered;
+}
+
+.box2 {
+    background-color: green;
+    width: 75%;
+}
+
+.box3 {
+    background: brown url('../images/red_pattern.jpg') 100% 100% / contain;
+    width: 54%;
+}
+
+.box4 {
+    margin-bottom: 0;
+    background-color: orange;
+    width: 64%;
+}

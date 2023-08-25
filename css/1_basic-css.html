@@ -89,13 +89,38 @@
         .main-box {
             border: 4px solid #000;
             width: 500px;
-            background-color: greenyellow;
+            background-color: gray;
             padding: 20px;
+            box-sizing : border-box;
+            /* 이렇게 하면 내가 주고 싶은 500px를 줄수 있음
+            그러나 content-box는 우리가 일일이 계산해야함  */
+
+            /* background-image: url('./images/radio2.jpg'); */
+            /* background-image : linear-gradient(rgb(246, 166, 193), rgb(224, 147, 224));
+            /* 그라데이션을 만들어 줌 */
+            background-repeat: no-repeat; 
+            background-position : right bottom;   /* 이걸 굉장히 자주 씀!!! */
+          
+            /* background-position : 50% 50% */
+            /* background-position : 50px 50px; */
+            /* x, y 로 가로 세로 방향으로 보면 됨 */
+            /* repeat-y, repeat-x도 있음  */
+
+            /* background-size : 50px 50px;  */
+            /* background-size : 200px auto;  */ /* 가로에 맞는 사이즈를 너가 알아서 계산해줘가 됨  */
+            /* background-size : contain; */  /* 남을지언정 꽉차게  */
+            /* background-size : cover; */ /* 짤릴지언정 꽉차게 */
+         
+
+            background : pink url('./images/radio2.jpg') no-repeat 50% 50% / 100px auto;
+            /* background-color: red; */
+            /*  배경색을 바꾸고 싶으면 그 아래에 적어줘야함 */
+            /* 위치/사이즈 있는 곳만 순서 지키면 됨  */
         }
 
         .main-box>* {
-            border: 4px solid black;
-            background-color: orange;
+            border: 4px solid bisque;
+            background-color: transparent;
         }
 
         .main-box .box-2 {
@@ -106,8 +131,7 @@
         .main-box > .boxes {
             padding: 10px;
         }
-
-    
+   
 
     </style>
     <div class="mother">
@@ -139,5 +163,7 @@
         </div>
     </div>
 </body>
+
+<!--  : first-child 만 적용해서 사용해도 됨  -->
 
 </html>
