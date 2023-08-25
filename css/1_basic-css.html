@@ -19,7 +19,7 @@
         body {
             border: 2px solid blue;
         } */
-/* 
+        /* 
         div {
 
             width: 50%;
@@ -84,35 +84,38 @@
             height: 100px;
         }
 
-/* practice 부분 */
+        /* practice 부분 */
 
         .main-box {
             border: 4px solid #000;
             width: 500px;
             background-color: gray;
             padding: 20px;
-            box-sizing : border-box;
+            box-sizing: border-box;
             /* 이렇게 하면 내가 주고 싶은 500px를 줄수 있음
             그러나 content-box는 우리가 일일이 계산해야함  */
 
             /* background-image: url('./images/radio2.jpg'); */
             /* background-image : linear-gradient(rgb(246, 166, 193), rgb(224, 147, 224));
             /* 그라데이션을 만들어 줌 */
-            background-repeat: no-repeat; 
-            background-position : right bottom;   /* 이걸 굉장히 자주 씀!!! */
-          
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            /* 이걸 굉장히 자주 씀!!! */
+
             /* background-position : 50% 50% */
             /* background-position : 50px 50px; */
             /* x, y 로 가로 세로 방향으로 보면 됨 */
             /* repeat-y, repeat-x도 있음  */
 
             /* background-size : 50px 50px;  */
-            /* background-size : 200px auto;  */ /* 가로에 맞는 사이즈를 너가 알아서 계산해줘가 됨  */
-            /* background-size : contain; */  /* 남을지언정 꽉차게  */
-            /* background-size : cover; */ /* 짤릴지언정 꽉차게 */
-         
+            /* background-size : 200px auto;  */
+            /* 가로에 맞는 사이즈를 너가 알아서 계산해줘가 됨  */
+            /* background-size : contain; */
+            /* 남을지언정 꽉차게  */
+            /* background-size : cover; */
+            /* 짤릴지언정 꽉차게 */
 
-            background : pink url('./images/radio2.jpg') no-repeat 50% 50% / 100px auto;
+            background: pink url('./images/radio2.jpg') no-repeat 50% 50% / 100px auto;
             /* background-color: red; */
             /*  배경색을 바꾸고 싶으면 그 아래에 적어줘야함 */
             /* 위치/사이즈 있는 곳만 순서 지키면 됨  */
@@ -128,14 +131,40 @@
             /* 중간 박스에 상하 마진을 줌으로써 올킬 */
         }
 
-        .main-box > .boxes {
+        .main-box>.boxes {
             padding: 10px;
         }
+
         .practice-box {
             margin: 30px;
             border: 1px solid black;
         }
-   
+
+        h1 {
+            font-weight: 100;
+            font-size: 32px;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            /* initial-letter: -1; */
+            /* font : italic 400 24px/30px 'Roboto', sans-serif; */
+            /* line-height / font-size 는 슬래시 이용 Roboto 가 없으면 보여줄 폰트 */
+            text-indent: 10px;
+            text-decoration: underline;
+            /*line through 이런 것도 있음 */
+            text-decoration-color: red;
+        }
+        ::selection {
+            background-color: lime;
+        }
+
+        p{
+            font-size: 12px;
+        }
+        
 
     </style>
     <div class="mother">
@@ -146,6 +175,10 @@
             </p>
         </div>
     </div>
+
+    <h1>저는 구빛나입니다.</h1>
+    <h2>Hi I am a front-end engineer Bitna Gu. Nice to meet you!</h2>
+    <p>프론트엔드 개발자가 되기 위해 오늘도 달리는 빛나</p>
 
     <div class="pink-box">하이염</div>
 
