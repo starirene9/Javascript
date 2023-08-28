@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.css/css/reset.css">
+    <style>
+        .mother {
+            border: 4px solid black;
+            padding: 10px;
+            display: flex;
+            /* width: 500px; */
+            /* 부모상자 width를 오토값으로 주면 자식 width에 맞춰서 알아서 늘어나고 줄어들고 그러함 */
+            height: 400px;
+            flex-wrap: wrap;
+            /* 줄바꿈을 시켜주는게(벽 맞고 떨어지게 한다) wrap 이다  */
+            /* 부모에 넓이를 주고 자식을 증가시키면 안에 자식의 w,h을 무시하고 꾸겨 넣음 */
+            
+            /* flex-direction: column; */
+            /* flex-direction: row 가 초기값임 */
+            /* reverse 붙이면 역방향 */
+            /* 가로 배치가 됨, 아래로는 flow임 */
+            justify-content:space-between;
+            /* align-items:stretch; */
+        }
+
+        .mother>.item {
+            /* background-color: pink; */
+            /* width: 30%; */
+            height: 100px;
+            /* margin: 0 10px; */
+            text-align: center;
+            align-items: center;
+            flex-basis: 300px;
+            margin: 0 5px;
+        }
+
+        .a {
+            background-color: red;
+            flex-grow: 1;
+        }
+        .b {
+            background-color: green;
+            flex-grow: 1;
+        }
+        .c {
+            background-color:blue;
+            flex-grow: 1;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="mother">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <!-- <div class="item c">C</div>
+        <div class="item c">C</div>
+        <div class="item c">C</div> -->
+
+        <!-- <div class="item">C</div>
+        <div class="item">C</div>
+        <div class="item">C</div>
+        <div class="item">C</div>
+        <div class="item">C</div>
+        <div class="item">C</div>
+        <div class="item">C</div> -->
+    </div>
+    <span>abcd</span>
+</body>
+
+</html>

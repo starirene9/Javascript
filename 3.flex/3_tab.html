@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.css//css/reset.css">
+    <style>
+        .wrap {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid #000;
+            padding-left: 17px;
+            width: 664px;
+            height: 49px;
+            margin-top: 100px;
+        }
+
+        .tab {
+            border-radius: 10px 10px 0px 0px;
+            border: 1px solid #DADADA;
+            border-bottom: none; 
+            /* 아래 선도 놓치지 않고 none으로 해줘야함*/
+            background: #FFF;
+
+            color: #000;
+            font-family: Noto Sans KR;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            
+            display: flex;
+            align-items: center;
+
+            /* padding: 10px 20px; */
+            margin-right: 5px;
+        }
+
+        .tab:hover{
+            background: #9C9C9C;
+            color: rgba(255, 255, 255, 1);
+            border-color: #9C9C9C; 
+            /* border-color : 까지 배경색에 맞춰주는것 신경쓸 것~!  */
+            font-family: 'Noto Sans KR',sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            display: block;
+            padding: 10px 20px;
+            /* a 태그에다가 패딩을 줘야지 클릭시 링크가 잘 이동됨 */
+            /* border: 1px solid blue; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="tab tab1">
+            <strong>
+                <a href="">교실</a>
+            </strong>
+        </div>
+        <div class="tab tab2">
+            <strong>
+                <a href="">운동장</a>
+            </strong>
+        </div>
+        <div class="tab tab3">
+            <strong>
+                <a href="">놀이터</a>
+            </strong>
+        </div>
+        <div class="tab tab3">
+            <strong>
+                <a href="">학교강당</a>
+            </strong>
+        </div>
+    </div>
+</body>
+
+</html>
