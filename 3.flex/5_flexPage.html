@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.css/css/reset.css">
+    <style>
+        .wrap {
+            display: flex;
+            border: 1px solid black;
+            padding: 25px;
+            width: 1042px;
+            height: 490px;
+
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .box-left {
+            /* border: 1px solid red; */
+            flex: 1;
+            flex-basis: 0;
+        }
+
+        .box-right {
+            flex: 1;
+            padding-left: 38px;
+            flex-basis: 1;
+        }
+
+        .box-right>* {
+            /* border: 1px solid green; */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .right-section {
+            display: flex;
+        }
+
+        .middle-box {
+            margin: 20px 0;
+        }
+
+        .inner-box {
+            padding: 11px 0 17px 22px;
+            /* background-color: yellow; */
+        }
+
+        .first-img {
+            width: 567px;
+            height: 353px;
+            flex-shrink: 0;
+            margin-bottom: 35px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            flex-shrink: 0;
+        }
+
+        strong {
+            /* border: 2px solid black; */
+            color: #CC4C6E;
+            font-family: Noto Sans KR;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .first-h1 {
+            color: #000;
+            font-family: Noto Sans KR;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            width: 525px;
+            /* background-color: orange; */
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            color: #000;
+            font-family: Noto Sans KR;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            width: 265px;
+        }
+
+        span {
+            color: #464646;
+            font-family: Noto Sans KR;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box-left">
+            <a href="">
+                <img src="../2.css/images/img1.png" alt="티저이미지1" class="first-img"></img>
+                <div>
+                    <strong>티저 예고편</strong>
+                    <h1 class="first-h1">[개미가 타고 있어요] 주식 떡락한 당신을 위한 드라마</h1>
+                    <span>티빙(TVING)</span>
+                </div>
+            </a>
+        </div>
+        <div class="box-right">
+            <div>
+                <a href="" class="right-section">
+                    <img src="../2.css/images/img4.png" alt="신곡이미지1"></img>
+                    <div class="inner-box">
+                        <strong>신곡 MV </strong>
+                        <h1>SUPER JUNIOR 슈퍼주니어Mango MV</h1>
+                        <span>SMTOWN</span>
+                    </div>
+                </a>
+            </div>
+            <div class="middle-box">
+                <a href="" class="right-section">
+                    <img src="../2.css/images/img2.png" alt="신곡이미지2"> </img>
+                    <div class="inner-box">
+                        <strong>신곡 MV </strong>
+                        <h1>SUPER JUNIOR 슈퍼주니어Mango MV</h1>
+                        <span>SMTOWN</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="" class="right-section">
+                    <img src="../2.css/images/img3.png" alt="신곡이미지3"> </img>
+                    <div class="inner-box">
+                        <strong>신곡 MV </strong>
+                        <h1>SUPER JUNIOR 슈퍼주니어Mango MV</h1>
+                        <span>SMTOWN</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
