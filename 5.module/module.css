@@ -175,7 +175,6 @@ li {
 /* index */
 .index {
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
     align-items: center;
     height: 59px;
@@ -183,24 +182,24 @@ li {
     /* background-color: pink; */
 }
 
-.index>.left-box,
-.right-box {
+.index>.avatar,
+.feedback {
     display: flex;
     align-items: center;
 }
 
-.index>.left-box img {
+.index>.avatar img {
     width: 27px;
     margin-right: 3px;
 }
 
-.index>.left-box>strong {
+.index>.avatar>strong {
     font-size: 14px;
     font-weight: 700;
 }
 
-.index .right-box a {
-    padding: 2px 5px;    
+.index>.feedback>a {
+    padding: 2px 5px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -210,18 +209,142 @@ li {
     font-weight: 500;
 }
 
-.index .right-box span {
+.index>.feedback>a>i {
     font-size: 0;
-/* 보이지 않게 함 그러나 a 태그는 시각장애인을 위한 링크필요해서 글 넣어줘야함 */
+    /* 보이지 않게 함 그러나 a 태그는 시각장애인을 위한 링크필요해서 글 넣어줘야함 */
     width: 20px;
     height: 20px;
     margin-right: 2px;
 }
-.index > .right-box > .comments > span {
+
+.index>.feedback>a.comments>i {
     background: url('../2.css/images/message-circle.svg');
-  
+
 }
 
-.index > .right-box > a.likes > span {
+.index>.feedback>a.likes>i {
     background: url('../2.css/images/heart.svg');
+}
+
+/* index- more */
+/* 1. 영역의 border로 구분 2. display:flex로 영역 정리 3. 내부사항 해결 */
+.index-more {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-more>.avatar {
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.index-more>.avatar>.photo {
+    /* border: 1px solid black; */
+    margin-right: 11px;
+    width: 39px;
+    height: 39px;
+}
+
+.index-more>.avatar>.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-more>.avatar>.text>strong {
+    color: #F00;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.index-more>.avatar>.text>span {
+    color: #828282;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.index-more>a {
+    /* border: 1px solid blue; */
+    font-size: 0px;
+    background: url('../2.css/images/more-vertical.svg');
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* share */
+
+.share {
+    padding: 0 4px;
+    /* 선이 떠어져있는 점을 고려하여 */
+}
+
+.share>.feedback {
+    /* border: 1px solid red; */
+    height: 45px;
+    padding: 0 21px;
+    border-bottom: 1px solid #F2F2F2;
+
+    display: flex;
+    /* 자동으로 width height 가 되게 만듦 */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.share>.feedback>* {
+    /* border: 1px solid red; */
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.share>.feedback>.like {
+    background-image: url('../2.css/images/like.svg');
+}
+
+.share>.feedback>.comment {
+    background-image: url('../2.css/images/comment.svg');
+}
+
+.share>.feedback>.back {
+    background-image: url('../2.css/images/back.svg');
+}
+
+.share>.write {
+    height: 45px;
+    padding: 0 21px;
+    display: flex;
+    align-items: center;
+}
+
+.share>.write>img {
+   width: 24px;
+   height: 24px;
+   flex-grow: 0;
+   /* flex-grow 를 먹여주자 하단도 */
+   margin-right: 13px;
+}
+
+.share>.write>.write-comment {
+    flex-grow: 1;
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
+    height: 30px;
+    box-sizing: border-box;
+    padding-left: 16px;
+}
+
+.share>.write>.write-comment::placeholder {
+    color : #BDBDBD;
+    font-size: 10px;
+    font-weight: 400;
+    /* 안에 쓰는 placeholder 글씨색 */
+}
+
+.share>.write>.write-comment:focus {
+    outline:none;
+    /* 글 쓸 때 파란 부분 없어짐 */
 }
