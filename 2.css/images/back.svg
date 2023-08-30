@@ -2,6 +2,7 @@
 <rect width="24" height="24" fill="#F5F5F5"/>
 <path d="M-374 -137C-374 -138.105 -373.105 -139 -372 -139H224C225.105 -139 226 -138.105 226 -137V2054C226 2055.1 225.105 2056 224 2056H-372C-373.105 2056 -374 2055.1 -374 2054V-137Z" fill="#C8C8C8"/>
 <g clip-path="url(#clip0_250_290)">
+<rect width="280" height="92" transform="translate(-233 -10)" fill="white"/>
 <path d="M15 14L20 9L15 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4 20V13C4 11.9391 4.42143 10.9217 5.17157 10.1716C5.92172 9.42143 6.93913 9 8 9H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
