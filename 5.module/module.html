@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,119 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="module.css">
-<style>
 
-</style>
 <body>
     <!-- 부품들 -->
-    <h1 class="main-title">
-        Lampara Look
-    </h1>
-    <span class="sub-title">Subtitle</span>
+    <h1 class="main-title">Lampara Look</h1>
+    <p class="sub-title">Subtitle</p>
+    <hr />
+    <button class="btn red small">확인</button>
+    <button class="btn blue small">확인</button>
+    <button class="btn green small">확인</button>
+    <button class="btn red large">확인</button>
+    <button class="btn blue large">확인</button>
+    <button class="btn green large">확인</button>
+    <hr />
+
+    <div class="card">
+        <div class="title">
+            <button class="btn green small">HOME</button>
+            <div class="main-title">Lampara Look</div>
+            <div class="sub-title">by <span>Saca Tuerca</span></div>
+        </div>
+        <div class="article">
+            <div class="main-title">Title</div>
+            <div class="sub-title">Subtitle</div>
+            <p>Lorem ipsum carrots, enhanced undergraduate developer, but they do occaecat time and vitality, Lorem
+                ipsum carrots, enhanced undergraduate developer, but they do occaecat time and vitality</p>
+        </div>
+        <div class="index">
+            <div class="left-box">
+                <img src="../2.css/images/Avatar.svg" alt="프로필 이미지">
+                <strong>Felipe Sacudon</strong>
+            </div>
+            <div class="right-box">
+                <a href="" class="comments">
+                    <span>comments</span>20
+                </a>
+                <a href="" class="likes">
+                    <span>likes</span>22
+                </a>
+                <!-- 클릭하면 이동하도록 a 태그로 둘러싸야 함 -->
+            </div>
+        </div>
+        <div class="photo">
+            <img src="../2.css/images/temp_Images.png" alt="stand">
+        </div>
+    </div>
+    <hr />
+    <div class="card">
+        <div class="photo">
+            <img src="../2.css/images/temp_Images.png" alt="stand">
+        </div>
+        <div class="index">
+            <div class="left-box">
+                <img src="../2.css/images/Avatar.svg" alt="프로필 이미지">
+                <strong>Felipe Sacudon</strong>
+            </div>
+            <div class="right-box">
+                <a href="" class="comments">
+                    <span>comments</span>20
+                </a>
+                <a href="" class="likes">
+                    <span>likes</span>22
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card">
+        <div class="title">
+            <button class="btn green small">HOME</button>
+            <div class="main-title">Lampara Look</div>
+            <div class="sub-title">by <span>Saca Tuerca</span></div>
+            <div class="photo">
+                <img src="../2.css/images/temp_Images.png" alt="stand">
+            </div>
+        </div>
+        <div class="index">
+            <div class="left-box">
+                <img src="../2.css/images/Avatar.svg" alt="프로필 이미지">
+                <strong>Felipe Sacudon</strong>
+            </div>
+            <div class="right-box">
+                <a href="" class="comments">
+                    <span>comments</span>20
+                </a>
+                <a href="" class="likes">
+                    <span>likes</span>22
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card">
+        <div class="photo">
+            <img src="../2.css/images/temp_Images.png" alt="stand">
+        </div>
+        <div class="article">
+            <div class="main-title">Title</div>
+            <div class="sub-title">Subtitle</div>
+            <p>Lorem ipsum carrots, enhanced undergraduate developer, but they do occaecat time and vitality, Lorem
+                ipsum carrots, enhanced undergraduate developer, but they do occaecat time and vitality</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        const sub = document.querySelector('.sub_title')
+        console.log(getComputedStyle(sub).getPropertyValue('--subtitle-text-color'));
+    </script>
 </body>
+
 </html>

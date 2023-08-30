@@ -1,38 +1,89 @@
 @charset 'utf-8';
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* reset */
 /* 디자이너들이 쓰는 색 토큰등록 */
 /* -- 두개 넣고 변수 만들면 됨 */
+/* root가 css의 window 급이라고 보면 됨 */
+
 :root {
-    --main-card-bg: #white;
-    --body-text-color : #333;
-    --title-text-color : #000;
-    --subtitle-text-color : #4F4F4F;
+    --main-card-bg: white;
+    --body-text-color: #333;
+    --title-text-color: #000;
+    --subtitle-text-color: #4F4F4F;
+    --point-red: #EB5757;
+    --point-blue: #2F80ED;
+    --point-green: #27AE60;
 }
 
-html {font-size: 16px;}
+html {
+    font-size: 16px;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     font-weight: 400;
-    /* 폰트 사이즈는 글뭉치로 사이즈 잡는게 좋음 */
-	line-height: normal;
-    color : var(--body-text-color);
+    /* 폰트 사이즈는 글 뭉치로(글 많은 것) 사이즈 잡는게 좋음 */
+    line-height: normal;
+    color: var(--body-text-color);
+    background-color: #e4e4e4;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-size: 24px;
-	font-weight: 700;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: bold;
 }
-body, h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
-	margin:0;
-	padding:0;
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+fieldset,
+blockquote,
+address,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+caption {
+    margin: 0;
+    padding: 0;
 }
+
 li {
-	list-style:none;
+    list-style: none;
 }
+
+/* 초기셋업 */
+/* 파일 셋업 */
+/* 상속시킬 서체, 글씨크기, 줄간격 : 글뭉치 것을 사용하면 됨 */
+/* 디자이너들이 쓰는 색 토큰등록 */
+
+/* 셋업 순서 
+1. 타이포그라피 셋업 
+2. 버튼 셋업
+3. 부품 셋업 
+4. 카드별 조립 */
 
 /* 타이포크라피 셋업 */
 .main-title {
@@ -48,15 +99,129 @@ li {
 }
 
 
+/* 버튼 셋업 */
+/* 공통적인 것은 상위 개념으로 추상화 한다. */
+.btn {
+    border: none;
+    font-weight: 700;
+    background-color: transparent;
+    color: white;
+}
 
-/* 초기셋업 */
-/* 파일 셋업 */
-/* 상속시킬 서체, 글씨크기, 줄간격 : 글뭉치 것을 사용하면 됨 */
-/* 디자이너들이 쓰는 색 토큰등록 */
+.btn.small {
+    /* 붙여서 작성해야함 */
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
 
-/* 셋업 순서 
-1. 타이포그라피 셋업 
-2. 버튼 셋업
-3. 부품 셋업 
-4. 카드별 조립 */
+.btn.large {
+    /* 붙여서 작성해야함 */
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 13px;
+}
 
+.btn.red {
+    background-color: var(--point-red)
+}
+
+.btn.green {
+    background-color: var(--point-green)
+}
+
+.btn.blue {
+    background-color: var(--point-blue)
+}
+
+/* 부품 셋업 */
+.card {
+    background-color: white;
+    width: 60%;
+    /* height: 200px; */
+    border-radius: 8px;
+    overflow: hidden;
+    /* 이미지 넘쳐나는 것을 hidden */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    margin: 30px auto;
+}
+
+/* photo */
+.photo img {
+    width: 100%;
+    display: block;
+    /* img가 인라인이여서 아래 하얀 줄의 공간이 뜬다. 이 부분은 display: block 줄것 */
+}
+
+/* title */
+.title {
+    padding: 9px 0px 11px 19px;
+    /* border: 1px solid red; */
+}
+
+/* article */
+.article {
+    padding: 12px 10px;
+}
+
+.article>.sub-title {
+    margin: 5px 0;
+}
+
+.title>.main-title {
+    margin-bottom: 4px;
+}
+
+/* index */
+.index {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+    padding: 0px 10px;
+    /* background-color: pink; */
+}
+
+.index>.left-box,
+.right-box {
+    display: flex;
+    align-items: center;
+}
+
+.index>.left-box img {
+    width: 27px;
+    margin-right: 3px;
+}
+
+.index>.left-box>strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.index .right-box a {
+    padding: 2px 5px;    
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.index .right-box span {
+    font-size: 0;
+/* 보이지 않게 함 그러나 a 태그는 시각장애인을 위한 링크필요해서 글 넣어줘야함 */
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+.index > .right-box > .comments > span {
+    background: url('../2.css/images/message-circle.svg');
+  
+}
+
+.index > .right-box > a.likes > span {
+    background: url('../2.css/images/heart.svg');
+}
