@@ -153,6 +153,17 @@ li {
     /* img가 인라인이여서 아래 하얀 줄의 공간이 뜬다. 이 부분은 display: block 줄것 */
 }
 
+/* red-title */
+.red-title {
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+
+.red-title>.btn {
+    margin-bottom: 8px;
+}
+
+
 /* title */
 .title {
     padding: 9px 0px 11px 19px;
@@ -321,11 +332,11 @@ li {
 }
 
 .share>.write>img {
-   width: 24px;
-   height: 24px;
-   flex-grow: 0;
-   /* flex-grow 를 먹여주자 하단도 */
-   margin-right: 13px;
+    width: 24px;
+    height: 24px;
+    flex-grow: 0;
+    /* flex-grow 를 먹여주자 하단도 */
+    margin-right: 13px;
 }
 
 .share>.write>.write-comment {
@@ -338,13 +349,51 @@ li {
 }
 
 .share>.write>.write-comment::placeholder {
-    color : #BDBDBD;
+    color: #BDBDBD;
     font-size: 10px;
     font-weight: 400;
     /* 안에 쓰는 placeholder 글씨색 */
 }
 
 .share>.write>.write-comment:focus {
-    outline:none;
+    outline: none;
     /* 글 쓸 때 파란 부분 없어짐 */
 }
+
+/* Play */
+
+.play {
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* column을 주고 aic 하면 센터가 됨 */
+}
+
+.play>.btn.green {
+    /* 이름을 두개 써줌 */
+    font-size: 0;
+    width: 59px;
+    height: 59px;
+    /* margin-bottom: 15px; */
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* background-position: 107px 30px; */
+    justify-content: center;
+    background-image: url('../2.css/images/play.svg');
+    background-repeat: no-repeat;
+    background-position: 21px center;
+    cursor: pointer;
+    /* button 배경색을 green으로 입히고 border-radius 50%주고 배경색으로 버튼을 입혀 위치를 잡는다. */
+    margin-top: -30px;
+    /* 마진 탑으로 걸치게 한다. */
+}
+
+
+.play>h5 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
