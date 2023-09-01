@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+
+/* reset */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+fieldset,
+blockquote,
+address,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+caption {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* 초기셋업 */
+/* 파일과 리셋 */
+/* 상속시킬 서체, 글씨크기, 줄간격 : 글뭉치 것을 사용하면 됨 */
+/* 디자이너들이 쓰는 색을 변수로 등록 */
+
+/* 1. layout */
+/* 2. 타이포그라피 셋업  */
+/* 3. 버튼 셋업 */
+/* 4. 부품 셋업  */
+/* 5. 섹션 작업  */

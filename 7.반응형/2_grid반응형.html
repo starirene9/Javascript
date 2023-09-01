@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.css/css/reset.css">
+</head>
+<style>
+    body {
+        background-color: yellow;
+    }
+
+    .mother {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* column : 수평 방향 */
+        grid-template-rows: repeat(4, 1fr);
+        /* row : 수직 방향 */
+        padding: 10px;
+
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .son {
+        background-color: lightgray;
+        height: 150px;
+    }
+
+    /* 미디어 쿼리 안과 밖의 명시도를 맞춰주어야 한다.
+    그래야지 미디어 쿼리의 우선순위가 높아짐 */
+
+    @media screen and (min-width : 720px) {
+        body {
+            background-color: red;
+        }
+    }
+
+    @media screen and (min-width : 780px) {
+        body {
+            background-color: green;
+        }
+
+        .mother {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+        }
+    }
+
+    @media screen and (min-width : 990px) {
+        body {
+            background-color: orange;
+        }
+
+        .mother {
+            max-width: 1400px;
+            margin: 0 auto;
+            /* 최대치 값 1400px 일때 늘리지 않고 중앙 정렬  */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+    
+        }
+    }
+</style>
+
+<body>
+    <div class="mother">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+        <div class="son">4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.css/css/reset.css">
+</head>
+<style>
+    body {
+        background: yellow;
+    }
+
+    .box {
+        width: 300px;
+        height: 100px;
+        padding: 30px;
+        background-color: blue;
+        display: flex;
+    }
+
+    .box .son {
+        border: 2px solid black;
+        width: 50%;
+        height: 50%;
+    }
+
+
+    /* ~720 이전까지 body 가 스마트폰의 공간을 담당*/
+    /* 이 모델을 많이 쓰심  */
+
+    @media screen and (min-width : 720px) {
+        body {
+            background-color: red;
+        }
+        .box {
+            width: 400px;
+        }
+    }
+
+    @media screen and (min-width:780px) {
+        body {
+            background-color: green;
+        }
+        .box {
+            /* display: block; 을 해도 좋음 */ 
+            flex-direction: column;
+            width: auto;
+            /* 100%를 쓰면 패딩이 들어가 있을때 하단에 스크롤이 생김 */
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        body {
+            background-color: orange;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="box">
+        <div class="son">1</div>
+        <div class="son">2</div>
+    </div>
+</body>
+<!-- /* ~720까지 */
+@media screen and (max-width : 720px) {
+    body {
+        background-color: red;
+    }
+
+    /* 720을 넘어가는 순간 색이 바뀜 */
+}
+
+/* 721~ 780 부분은 구멍이 나서 바디색인 노랑색이 나옴  */
+@media screen and (min-width:781px) and (max-width: 989px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    body {
+        background-color: orange;
+    }
+} -->
+
+</html>

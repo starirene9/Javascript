@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mother {
+        border: 4px solid black;
+        padding: 20px;
+        position: relative;
+        /* 일반적으로 기준 표시는 position: relative */
+    }
+
+    .son {
+        background-color: lime;
+        height: 50px;
+
+    }
+
+    .son.me {
+        height: 50px;
+        width: auto;
+        /* auto는 늘어나는 것임  */
+        background-color: green;
+        position: absolute;   
+        /* 부모 기준 */
+        /* position: relative; */
+        /* 분신 기준 */
+        /* position: fixed; */
+        /* 브라우저 창 : 뷰 포트 기준 (보여지는 화면 사이즈) */
+
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+
+</style>
+
+<body>
+    <div class="mother">
+        <div class="son">a</div>
+        <div class="son me">me</div>
+        <div class="son">b</div>
+        <div class="son">c</div>
+    </div>
+    <p>로렘입섬은 유명하지 않다. 입생로랑은 유명하다.</p>
+</body>
+
+</html>

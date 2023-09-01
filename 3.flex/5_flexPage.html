@@ -24,7 +24,10 @@
             /* border: 1px solid red; */
             flex: 1;
             flex-basis: 0;
+
+            /* position: relative; */
         }
+
 
         .box-right {
             flex: 1;
@@ -58,13 +61,17 @@
             width: 567px;
             height: 353px;
             flex-shrink: 0;
-            margin-bottom: 35px;
+            /* margin-bottom: 35px; */
         }
 
         img {
             width: 150px;
             height: 150px;
             flex-shrink: 0;
+        }
+
+        .text {
+            margin-top: 35px;
         }
 
         strong {
@@ -107,6 +114,53 @@
             font-weight: 400;
             line-height: normal;
         }
+
+        .box-left>a>.player {
+            position: relative;
+            /* border: 2px solid pink; */
+        }
+
+        /* 
+        .box-left> a > .player > button {
+            background-color: red;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            /* 정가운데 공식 : left: 50%하고 너비의 반의 ml을 빼줌 */
+        /* top: 50%;
+            margin-top: -30px;
+
+            cursor: pointer;
+            /* cursor pointer 주는 것 잊지 말것~! */
+        /* }  */
+
+        .box-left>a>.player>button {
+            background-color: red;
+            color: white;
+            /* 반면에 width, height 가 px 가 아닌 % 일때  */
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /*translate는 자기 몸이 기준*/
+            transition: all 0.3s ease;
+        }
+
+        .box-left>a>.player>button:hover {
+            transform: scale(3) rotate(180deg);
+        }
     </style>
 </head>
 
@@ -114,8 +168,11 @@
     <div class="wrap">
         <div class="box-left">
             <a href="">
-                <img src="../2.css/images/img1.png" alt="티저이미지1" class="first-img"></img>
-                <div>
+                <div class="player">
+                    <img src="../2.css/images/img1.png" alt="티저이미지1" class="first-img"></img>
+                    <button>Play</button>
+                </div>
+                <div class="text">
                     <strong>티저 예고편</strong>
                     <h1 class="first-h1">[개미가 타고 있어요] 주식 떡락한 당신을 위한 드라마</h1>
                     <span>티빙(TVING)</span>
