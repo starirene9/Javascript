@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 
 
 /* reset */
@@ -19,7 +19,6 @@ body {
     font-weight: 400;
     line-height: 1.3;
     color: var(--primary-black);
-    background-color: lightgray;
 }
 
 h1,
@@ -68,19 +67,6 @@ li {
 
 /* 초기셋업 */
 /* 파일과 리셋 */
-/* 상속시킬 서체, 글씨크기, 줄간격 : 글뭉치 것을 사용하면 됨 */
-
-
-.card-title {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.button-letter {
-    font-size: 14px;
-    font-weight: 700;
-}
-
 /* 디자이너들이 쓰는 색을 변수로 등록 */
 
 /* 1. layout */
@@ -88,22 +74,24 @@ li {
 .wrap {
     width: 100%;
 }
+
 .ad {
     height: 35px;
-    background-color: red;
+    background-color: skyblue;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
 
 }
+
 header {
     background-color: var(--primary-white);
     height: 60px;
 
     position: fixed;
-    opacity: 0.5;
-    top : 35px;
+    /* opacity: 0.5; */
+    top: 35px;
     left: 0;
     right: 0;
     /* 늘어나는 것과 유사함 */
@@ -127,10 +115,201 @@ footer {
 }
 
 /* 2. 타이포그라피 셋업  */
+
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
 /* 3. 버튼 셋업 */
+.btn {
+    border: none;
+    border-radius: 2px;
+    padding: 15px;
+    /* 상하에 15px */
+    min-width: 150px;
+
+    font-weight: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    text-transform: uppercase;
+}
+
+.btn.light {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    /* line-height: 20px; */
+    height: 50px;
+}
+
+.btn.light:hover {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+}
+
+.btn.dark {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    /* line-height: 20px; */
+    height: 50px;
+}
+
+.btn.dark:hover {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    box-sizing: border-box;
+    border: 2px solid var(--primary-black);
+}
+
 /* 4. 부품 셋업  */
+
 /* 5. 섹션 작업  */
+
+/* 반응형 */
+/* 스마트 폰의 영역 */
+/* 720 aside footer */
+/* 990 이상 3단 */
+/* 1200 이상 desktop menu*/
+
 /* header */
+/* 스마트 폰의 영역 */
+header {
+    height: 42px;
+    padding: 9px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .main-menu {
+    order: 1
+}
+
+header .main-menu .toggle {
+    /* border: 1px solid blue; */
+    width: 22px;
+    height: 18px;
+    font-size: 0;
+    cursor: pointer;
+    background-image: url('../images/menu.svg');
+
+    border: none;
+}
+
+header .logo {
+    /* border: 1px solid red; */
+    width: 98px;
+    height: 31.13px;
+    font-size: 0;
+    background: url('../images/allbirds-logo.svg') no-repeat;
+    order: 2;
+}
+
+header .util-menu {
+    order: 3
+}
+
+header .util-menu .cart {
+    /* border: 1px solid red; */
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    background-image: url('../images/cart.svg');
+    cursor: pointer;
+
+}
+
+header .main-menu ul,
+header .util-menu ul .gone {
+    display: none;
+}
+
+/* 1200px 이상의 영역 */
+@media screen and (min-width : 1200px) {
+    header {
+        height: 42px;
+        padding: 12px;
+    }
+
+    header .main-menu ul,
+    header .util-menu ul .gone {
+        display: block;
+    }
+
+    header .main-menu .toggle {
+        display: none;
+    }
+
+    header .main-menu {
+        flex: 2;
+        background-color: red;
+    }
+
+    header .util-menu {
+        flex: 2;
+        background-color: red;
+    }
+
+    header .main-menu ul,
+    header .util-menu ul {
+        display: flex;
+    }
+
+    header .main-menu ul li,
+    header .util-menu ul li {
+        background-color: yellow;
+        line-height: 28.8;
+    }
+
+    header .main-menu ul a,
+    header .util-menu ul a {
+        text-decoration: none;
+        color: var(--primary-black);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 1.7px;
+        border: 1px solid red;
+        display: block;
+    }
+
+    header .util-menu .cart a {
+        font-size: 0;
+    }
+
+
+}
+
+
 /* main */
+
+@media screen and (min-width : 720px) {}
+
+@media screen and (min-width : 990px) {}
+
+@media screen and (min-width : 1200px) {}
+
 /* aside */
+
+@media screen and (min-width : 720px) {}
+
+@media screen and (min-width : 990px) {}
+
+@media screen and (min-width : 1200px) {}
+
 /* footer */
+
+@media screen and (min-width : 720px) {}
+
+@media screen and (min-width : 990px) {}
+
+@media screen and (min-width : 1200px) {}
