@@ -1,12 +1,25 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 
 /* reset */
+/* 색상 등록 */
+:root {
+    --primary-black: #212a2f;
+    --primary-white: #ffffff;
+    --side-bg: #f8f7f5;
+    --text-gray-color: #999;
+
+}
+
+/* 주로 쓰는 글 등록 */
 body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.3;
+    color: var(--primary-black);
+    background-color: lightgray;
 }
 
 h1,
@@ -56,10 +69,68 @@ li {
 /* 초기셋업 */
 /* 파일과 리셋 */
 /* 상속시킬 서체, 글씨크기, 줄간격 : 글뭉치 것을 사용하면 됨 */
+
+
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.button-letter {
+    font-size: 14px;
+    font-weight: 700;
+}
+
 /* 디자이너들이 쓰는 색을 변수로 등록 */
 
 /* 1. layout */
+
+.wrap {
+    width: 100%;
+}
+.ad {
+    height: 35px;
+    background-color: red;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+}
+header {
+    background-color: var(--primary-white);
+    height: 60px;
+
+    position: fixed;
+    opacity: 0.5;
+    top : 35px;
+    left: 0;
+    right: 0;
+    /* 늘어나는 것과 유사함 */
+}
+
+main {
+    margin-top: 95px;
+    /* 헤더 높이 만큼 줘야지 아래 글이 내려옴 안그러면 헤더 아래 같힘 */
+    height: 1000px;
+    background-color: pink;
+}
+
+aside {
+    background: green;
+    height: 400px;
+}
+
+footer {
+    background-color: var(--primary-black);
+    height: 400px;
+}
+
 /* 2. 타이포그라피 셋업  */
 /* 3. 버튼 셋업 */
 /* 4. 부품 셋업  */
 /* 5. 섹션 작업  */
+/* header */
+/* main */
+/* aside */
+/* footer */
