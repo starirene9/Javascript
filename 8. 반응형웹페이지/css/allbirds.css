@@ -100,7 +100,7 @@ header {
 main {
     margin-top: 95px;
     /* 헤더 높이 만큼 줘야지 아래 글이 내려옴 안그러면 헤더 아래 같힘 */
-    height: 1000px;
+    height: 4000px;
     background-color: pink;
 }
 
@@ -223,15 +223,27 @@ header .util-menu .cart {
     width: 24px;
     height: 24px;
     font-size: 0;
-    background-image: url('../images/cart.svg');
+    display: block;
+    background: url('../images/cart.svg') no-repeat;
     cursor: pointer;
+    position: relative;
 
+}
+
+header .util-menu .cart a span{
+    font-size: 11px;
+    position: absolute;
+    font-weight: bold;
+    /* background-color: yellowgreen; */
+    transform: translate(60%, 0); 
+    letter-spacing: 0;
 }
 
 header .main-menu ul,
 header .util-menu ul .gone {
     display: none;
 }
+
 
 /* 1200px 이상의 영역 */
 @media screen and (min-width : 1200px) {
@@ -251,23 +263,30 @@ header .util-menu ul .gone {
 
     header .main-menu {
         flex: 2;
-        background-color: red;
     }
 
     header .util-menu {
         flex: 2;
-        background-color: red;
     }
 
-    header .main-menu ul,
+    header .main-menu ul {
+        display: flex;
+    }
+
     header .util-menu ul {
         display: flex;
+        justify-content: end;
     }
 
     header .main-menu ul li,
     header .util-menu ul li {
-        background-color: yellow;
         line-height: 28.8;
+        margin-right: 40px;
+    }
+
+    header .main-menu ul li:last-child,
+    header .util-menu ul li:last-child {
+        margin-right: 0;
     }
 
     header .main-menu ul a,
@@ -278,19 +297,29 @@ header .util-menu ul .gone {
         font-weight: 700;
         line-height: 21px;
         letter-spacing: 1.7px;
-        border: 1px solid red;
         display: block;
     }
 
     header .util-menu .cart a {
         font-size: 0;
+        position: relative;
     }
 
+    header .util-menu li.cart a span{
+        right:11px;
+        bottom : 3px;
+       
+    }
 
 }
 
 
 /* main */
+.visual {
+    height: calc(100vh - 95px);
+    /* view port height */
+    background-color: green;
+}
 
 @media screen and (min-width : 720px) {}
 
