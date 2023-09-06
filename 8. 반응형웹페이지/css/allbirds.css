@@ -114,8 +114,7 @@ main {
 }
 
 aside {
-    /* background: green; */
-    height: 400px;
+    background-color: var(--side-bg);
 }
 
 footer {
@@ -175,16 +174,10 @@ footer {
 
 /* 5. 섹션 작업  */
 
-/* 반응형 */
-/* 스마트 폰의 영역 */
-/* 720 aside footer */
-/* 990 이상 3단 */
-/* 1200 이상 desktop menu*/
-
 /* header */
 /* 스마트 폰의 영역 */
 header {
-    height: 42px;
+    /* height: 42px; */
     padding: 9px 15px;
 
     display: flex;
@@ -252,6 +245,7 @@ header .util-menu ul .gone {
 /* main */
 .visual {
     height: calc(100vh - 95px);
+    /*  */
     /* background-color: green; */
     position: relative;
 }
@@ -304,7 +298,7 @@ main .btn.light:last-child {
 
 /* main 부품 구간 */
 .product {
-    width: 100%;
+    width: 80%;
     /* border: 1px solid #000; */
     max-width: 1284px;
     margin: 0 auto;
@@ -330,13 +324,14 @@ main .btn.light:last-child {
     justify-content: center;
     max-width: 1380px;
     /* border: 2px solid red; */
-    padding: 0 24px;
+    /* padding: 0 24px; */
 
 }
 
 .product ul li {
     background: rgba(255, 255, 255, 0.00);
     box-shadow: 0px 6px 24px 0px #D3D4D5;
+    /* border: 1px solid blue; */
 }
 
 .product ul li:nth-child(2),
@@ -363,10 +358,9 @@ main .btn.light:last-child {
     /* width: 100%; */
 }
 
-.product.collection a .desc {
+/* .product.collection a .desc {
     padding: 18px 30px;
-    /* border: 1px solid #000; */
-}
+} */
 
 .product.collection a .desc h5 {
     font-size: 22px;
@@ -377,6 +371,7 @@ main .btn.light:last-child {
     padding-bottom: 10px;
     margin-bottom: 12.03px;
 }
+
 
 .product.collection a .desc p {
 
@@ -429,7 +424,8 @@ main .btn.light:last-child {
 /* about 부품 */
 
 .about {
-    padding: 60px
+    /* border: 1px solid #000; */
+    padding: 60px 0;
 }
 
 .about picture {
