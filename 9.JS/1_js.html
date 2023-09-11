@@ -9,7 +9,18 @@
 </head>
 
 <body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
     <script>
+        const lis = document.querySelectorAll('ul >li');
+        console.log(lis); // li 6개 유사배열 나옴 
+        console.log(Array.isArray(lis)); //false
         // 1. 원시 표현식  2. 조합 수단  3. 추상화 수단
         // 프로그래밍은 데이터와 함수로 나뉜다.
         const 결과 = (3 * 3) && 5;
@@ -36,7 +47,7 @@
             return x * x;
         }
 
-        const abc = square(4) + sqaure(3);
+        // const abc = square(4) + sqaure(3);
         // 평가 타임
         // 1. 실행가능한 함수 square객체를 만들어 메모리에 준비한다.
         // 2. 이름 abc를 Declative 환경 레코드에 준비한다
@@ -72,6 +83,127 @@
         // 5. 3 * 5해서 15을 배출한다.
         // 6. 가비지 컬렉터가 렉시컬환경레코드를 지운다
         // 7. Declative 환경 레코드에 준비된 result 에 25를 할당한다.
+
+        // 뭔가를 제곱하는 함수
+        function square(x) {
+            var a = 10
+            return x * x;
+        }
+        const result2 = square(4) + square(3);
+
+        // 뭔가를 곱하는 함수
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        //두 숫자를 받아서 각 각의 제곱을 만들어 더하고 그 결과를 배출하는 함수를 만드세요. 다음에 주어진 square 함수를 이용하라. 
+        // 뭔가를 제곱하는 함수
+        function square(x) {
+            var a = 10
+            return x * x;
+        }
+
+        function squareSum(x, y) {
+            return square(x) + square(y);
+        }
+
+        const resultSum = squareSum(2, 3)
+        console.log(resultSum);
+
+        const 숫자 = 2; // number
+        const 문자 = '가나다라'; // string
+        const 없다 = undefined; // undefined
+        const 없음말하고싶을때 = null; // object
+        const 빈문자 = ''; // string
+        const 참 = true; // boolean
+        const 거짓 = false; // boolean
+        const 일반객체 = {
+            키: 180
+        } //object 표현된 객체 -> 메모화된 객체
+        const 배열객체 = [33, 32, '안녕'];
+
+        const 자매 = [{
+            이름: '구하나',
+            나이: 31,
+            취미: '요가',
+            직업: '간호사',
+            자식: {
+                큰아들: '구하나하나',
+                작은딸: '구하나둘',
+            }
+        }, {
+            이름: '구둘',
+            나이: 30,
+            취미: ['조깅', '수영', '헬스'],
+            직업: '무역',
+            강아지: [{
+                    이름: '구일심',
+                    나이: 17
+                },
+                {
+                    이름: '구장군',
+                    나이: 15
+                },
+            ]
+        }];
+
+        const 남자친구 = {
+            이름: '여정우',
+            나이: 30,
+            취미: ['방구 날리기', '코 크게 풀기', '요리하기', '구멍에 손넣기'],
+            강아지: {
+                이름: '스튜워드',
+                나이: 7,
+                색깔: '하얀색'
+            },
+        }
+
+        const 형제 = [{
+            이름: '정일범',
+            나이: 50,
+            취미: '봉사',
+            직업: '강사'
+        }, {
+            이름: '정을수',
+            나이: 49,
+            취미: ['등산', '달리기', '필라테스'],
+            직업: '강사',
+            자식: [{
+                    이름: '정의민',
+                    나이: 17
+                },
+                {
+                    이름: '정희민',
+                    나이: 15
+                },
+                {
+                    이름: '정민교',
+                    나이: 6
+                }
+            ]
+        }];
+
+        const sum = 형제[1].자식[0].나이 + 형제[1].자식[1].나이;
+        console.log(sum);
+        // for in 
+        for (let item in 형제[1]) {
+            console.log( item +':'+ 형제[1][item])
+        }
+
+        // for 정규식 반복문 
+        function 자식나이총합() {
+
+            let total = 0;
+
+            for (let i = 0; i < 형제[1].자식.length; i++) {
+
+                total += 형제[1].자식[i].나이;
+
+            }
+            return total;
+        }
+
+        console.log(자식나이총합());
     </script>
 </body>
 
