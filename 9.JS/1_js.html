@@ -187,13 +187,26 @@
         console.log(sum);
         // for in 
         for (let item in 형제[1]) {
-            console.log( item +':'+ 형제[1][item])
+            console.log(`${item} : ${형제[1][item]}`)
         }
 
-        // for 정규식 반복문 
-        function 자식나이총합() {
 
-            let total = 0;
+        function 자식나이합() {
+
+            total = 0;
+
+            for (let i = 0; i < 형제.length; i++) {
+
+                total += 형제[i].나이;
+
+            }
+            return total;
+        }
+
+    
+        function 손자나이합() {
+
+            total = 0;
 
             for (let i = 0; i < 형제[1].자식.length; i++) {
 
@@ -203,7 +216,39 @@
             return total;
         }
 
-        console.log(자식나이총합());
+        function 자식이름들() {
+
+            let names = '';
+
+            for (let i = 0; i < 형제.length; i++) {
+
+                names += 형제[i].이름+" ";;
+
+            }
+            return names;
+        }
+
+        function 손자이름들() {
+
+            let names = '';
+
+            for (let i = 0; i < 형제[1].자식.length; i++) {
+
+                names += 형제[1].자식[i].이름+" ";
+
+            }
+            return names;
+        }
+
+        const 부모님 = {
+            이름: '홍길동',
+            나이: 85,
+            자식나이합: 자식나이합(),
+            손자나이합: 손자나이합(),
+            자식이름들: 자식이름들(),
+            손자이름들: 손자이름들()
+        }
+
     </script>
 </body>
 
